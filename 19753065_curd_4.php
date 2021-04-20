@@ -1,5 +1,5 @@
 <?php 
-require("19753065_koneksi.php");
+require("koneksi.php");
 
 $hub = open_connection();
 $a = @$_GET["a"];
@@ -110,20 +110,20 @@ function input_data(){
 	<form action="19753065_curd_4.php?a=input" method="post"> 
 		<input type="hidden" name="sql" value="create"> 
 		Kode Prodi
-		<input type="text" name="kdprodi" maxlength="6" size="6" value="<?php echo trim($row["kdprodi"]) ?>" />
-		<br>
+		<input type="text" colspan="5" name="kdprodi" maxlength="6" size="6" value="<?php echo trim($row["kdprodi"]) ?>" />
+		<br><br>
 		Nama Prodi
-		<input type="text" name="nmprodi" maxlength="70" size="70" value="<?php echo trim($row["nmprodi"]) ?>" />
-		<br>
+		<input type="text" colspan="5" name="nmprodi" maxlength="70" size="70" value="<?php echo trim($row["nmprodi"]) ?>" />
+		<br><br>
 		akreditas Prodi
 		<input type="radio" name="akreditas" value="-" <?php if($row["akreditas"]=='-' || $row["akreditas"]=='') { echo "checked=\"checked\""; } else {echo "";} ?>> -
 		<input type="radio" name="akreditas" value="A" <?php if($row["akreditas"]=='A') { echo "checked=\"checked\""; } else {echo "";} ?>> A
 		<input type="radio" name="akreditas" value="B" <?php if($row["akreditas"]=='B') { echo "checked=\"checked\""; } else {echo "";} ?>> B
 		<input type="radio" name="akreditas" value="C" <?php if($row["akreditas"]=='C') { echo "checked=\"checked\""; } else {echo "";} ?>> C
+		<br><br>
+		<input type="submit" class="btn btn-outline-success" name="action" value="Simpan">
 		<br>
-		<input type="submit" name="action" value="Simpan">
-		<br>
-		<a href="19753065_curd_4.php?a=list">Batal</a>
+		<a href="19753065_curd_4.php?a=list" class="btn btn-outline-warning">Batal</a>
 	</form>
 <?php } ?>
 
@@ -139,20 +139,20 @@ function edit_data($id ){
 		<input type="hidden" name="sql" value="update">
 		<input type="hidden" name="idprodi" value="<?php echo trim ($id) ?>">
 		Kode Prodi
-		<input type="text" name="kdprodi" maxlength="6" size="6" value="<?php echo trim($row["kdprodi"]) ?>" />
-		<br>
-		Nama Prodi
+		<input type="text" colspan="5" name="kdprodi" maxlength="70" size="70" value="<?php echo trim($row["kdprodi"]) ?>" />
+		<br><br>
+		Nama Prodi 
 		<input type="text" name="nmprodi" maxlength="70" size="70" value="<?php echo trim($row["nmprodi"]) ?>" />
-		<br>
+		<br><br>
 		Akreditas Prodi
 		<input type="radio" name="akreditas" value="-" <?php if ($row["akreditas"]=="-" || $row["akreditas"]=='') { echo "checked=\"checked\""; } else {echo ""; } ?>> -
 		<input type="radio" name="akreditas" value="A" <?php if ($row["akreditas"]=='A') {echo "checked=\"checked\""; } else {echo ""; } ?> > A
 		<input type="radio" name="akreditas" value="B" <?php if ($row["akreditas"]=='B') {echo "checked=\"checked\""; } else {echo ""; } ?>> B
 		<input type="radio" name="akreditas" value="C" <?php if ($row["akreditas"]=='C') {echo "checked=\"checked\""; } else {echo ""; } ?>> C
+		<br><br>
+		<input type="submit"class="btn btn-outline-success" name="action" value="Simpan">
 		<br>
-		<input type="submit" name="action" value="Simpan">
-		<br>
-		<a href="19753065_curd_4.php?a=list">Batal</a>
+		<a href="19753065_curd_4.php?a=list" class="btn btn-outline-warning">Batal</a>
 	</form>
 <?php }  ?>
 <?php
