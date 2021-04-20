@@ -36,14 +36,39 @@ switch ($a) {
 mysqli_close($hub);
 ?>
 
+
+
+
+
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Welcome !</title>
+  </head>
+  <body background="pipes.png">
+    
+
 <?php
 function read_data() {
 	global $hub;
 	$query = "select * from dt_prodi";
 	$result = mysqli_query($hub, $query); ?>
 
-	<h2>Read Data Program Studi</h2>
-	<table border="1" cellpadding="2">
+	  <div style="max-width: 600px; margin: 9em auto">
+
+	<h2 class="text-center">Read Data Program Studi
+	 <a class="nav-link" href="home.php">HOME<span class="sr-only">(current)</span></a></h2>
+	<hr>
+<table class="table table-bordered table-striped">
 		<tr>
 			<td colspan="5"><a href="19753065_curd_4.php?a=input">INPUT</a></td>
 		</tr>
@@ -61,12 +86,16 @@ function read_data() {
 			<td><?php echo $row['nmprodi']; ?></td>
 			<td><?php echo $row['akreditas']; ?></td>
 			<td>
-				<a href="19753065_curd_4.php?a=edit&id=<?php echo $row ['idprodi']; ?>">EDIT</a>
-				<a href="19753065_curd_4.php?a=hapus&id=<?php echo $row ['idprodi']; ?>">HAPUS</a>
+
+				 <button type="button" class="btn btn-outline-success"> <a href="19753065_curd_4.php?a=edit&id=<?php echo $row ['idprodi']; ?>">EDIT</a></button>
+        <button type="button" class="btn btn-outline-warning"><a href="19753065_curd_4.php?a=hapus&id=<?php echo $row ['idprodi']; ?>">HAPUS</a></button>
+				
+				
 			</td>
 		</tr>
 		<?php } ?>
 	</table>
+</div>
 <?php } ?>
 
 <?php 
@@ -183,3 +212,13 @@ function delete_prodi() {
 	mysqli_query($hub, $query) or die(mysql_error());
 }
 ?>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+
