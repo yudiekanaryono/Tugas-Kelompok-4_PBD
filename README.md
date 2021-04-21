@@ -35,4 +35,4 @@ Tugas !!!
 - Lakukan pengujian hak akses user terhadap aplikasi dari sisi frontend (user-client) dan backend (user-admin). 
  
  
- 
+Aplikasi ini memiliki 2 tingkatan level yaitu user dan client, hal ini bertujuan untuk keamanan dan keoptimalan aplikasi, sebagai contoh, apabila kita login sebagai client kita hanya bisa membaca data, tidak bisa melakukan edit dan hapus data, dan apabila kita login sebagai user kita dapat melakukan edit dan delete data.
