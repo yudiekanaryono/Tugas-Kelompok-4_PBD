@@ -73,7 +73,7 @@ function read_data() {
 	  <div style="max-width: 600px; margin: 9em auto">
 
 	<h2 class="text-center">Data Program Studi
-	 <a class="nav-link" href="home.php">HOME<span class="sr-only">(current)</span></a></h2>
+	 <a class="nav-link" href="homeadmin.php">HOME<span class="sr-only">(current)</span></a></h2>
 	<hr>
 <table class="table table-bordered table-striped">
 		<tr>
