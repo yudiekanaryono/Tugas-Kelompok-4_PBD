@@ -35,6 +35,6 @@ Tugas !!!
 - Lakukan pengujian hak akses user terhadap aplikasi dari sisi frontend (user-client) dan backend (user-admin). 
  
  
- 
+Semoga bermanfaat
 
  
